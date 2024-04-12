@@ -20,6 +20,28 @@ function TodoApp() {
     return currentDate.toLocaleString('en-US', options);
   }
 
+  // Generate options for months (MM)
+  const months = [
+    'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+  ].map((month, index) => (
+    <option key={index + 1} value={index + 1}>{month}</option>
+  ));
+
+  // Generate options for dates (DD) based on the selected month
+  const [selectedMonth, setSelectedMonth] = useState(1); // Default to January
+  const daysInMonth = new Date(new Date().getFullYear(), selectedMonth, 0).getDate();
+  const dates = Array.from({ length: daysInMonth }, (_, i) => (
+    <option key={i + 1} value={i + 1}>{i + 1}</option>
+  ));
+
+  // Generate options for years (YYYY) starting from the current year up to 100 years in the future
+  const startYear = new Date().getFullYear();
+  const endYear = startYear + 100;
+  const years = Array.from({ length: endYear - startYear + 1 }, (_, i) => {
+    const year = startYear + i;
+    return <option key={year} value={year}>{year}</option>;
+  });
+
   return (
     <div className='Task_forms'>
       <div className='taskContainer'>
@@ -42,7 +64,25 @@ function TodoApp() {
             <FontAwesomeIcon icon={faClock} style={{width:20, height:20}}/>
           </div>
           <div className='col1-child5'>Due Date</div>
-          <div className='col1-child6'>hey</div>
+          <div className='col1-child6'>
+          <div className='col1-child6'>
+            <select>
+              {months}
+              <option value="MM">MM</option>
+              {/* Add options for months */}
+            </select>
+            <select>
+              {dates}
+              <option value="DD">DD</option>
+              {/* Add options for dates based on the month */}
+            </select>
+            <select>
+              {years}
+              <option value="YYYY">YYYY</option>
+              {/* Add options for years starting from 2024 */}
+            </select>
+          </div>
+          </div>
         </div>
         <div className='row4 col1'>
           <div className='col1-child7'>
