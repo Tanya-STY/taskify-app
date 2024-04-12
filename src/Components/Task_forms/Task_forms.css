@@ -139,10 +139,9 @@
     flex-direction: column; /* Set flex-direction to column */
     outline: 1px solid black;
     justify-content: flex-start; /* Align to the top/left */
-    outline: 1px solid black;
     padding: 5px;
     color: #82808F;
-    padding-right: 51px ;
+    padding-right: 57px ;
 
   }
 
@@ -285,6 +284,7 @@
     justify-content: flex-start; /* Align buttons to the left */
     gap: 5px; /* Add space between buttons */
     outline: 1px solid black; /* Add outline for debugging */
+    width: 250px;
   }
   
   .row8 {

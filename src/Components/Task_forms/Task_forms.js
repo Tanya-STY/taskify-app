@@ -156,7 +156,7 @@ function TodoApp() {
           <div className='col1-child7'>
             <FontAwesomeIcon icon={faTag} style={{width:20, height:20}}/>
           </div>
-          <div className='col1-child8'>Tags</div>
+          <div className='col1-child8'>Tag</div>
           <div className='col1-child9'>
             <div className='col1-child9'>
               {tags.length === 0 ? (
@@ -258,10 +258,10 @@ function TodoApp() {
             <button
               className="priority-button"
               style={{
-                backgroundColor: priority === 'high' ? '#FE0000' : '#FFFFFF',
-                boxShadow: priority === 'high' ? '0 0 5px 2px rgba(0, 0, 0, 0.5)' : 'none',
+                paddingLeft: '10px', backgroundColor: priority === 'high' ? 'rgb(254, 0, 0, 0.5)' : 'rgb(254, 0, 0, 0.5)',
+                boxShadow: priority === 'high' ? '0 0 5px 2px rgba(0, 0, 0, 0.3)' : 'none',
                 border: priority === 'high' ? '2px solid black' : 'none',
-                marginRight: '5px'
+                marginRight: '5px', marginLeft: '10px', height: '27px', borderRadius: '5px'
               }}
               onClick={() => handlePriorityClick('high')}
             >
@@ -270,10 +270,10 @@ function TodoApp() {
             <button
               className="priority-button"
               style={{
-                backgroundColor: priority === 'medium' ? '#FFA800' : '#FFFFFF',
-                boxShadow: priority === 'medium' ? '0 0 5px 2px rgba(0, 0, 0, 0.5)' : 'none',
+                backgroundColor: priority === 'medium' ? 'rgb(255, 168, 0, 0.7)' : 'rgb(255, 168, 0, 0.7)',
+                boxShadow: priority === 'medium' ? '0 0 5px 2px rgba(0, 0, 0, 0.7)' : 'none',
                 border: priority === 'medium' ? '2px solid black' : 'none',
-                marginRight: '5px'
+                marginRight: '5px', height: '27px', borderRadius: '5px'
               }}
               onClick={() => handlePriorityClick('medium')}
             >
@@ -282,9 +282,9 @@ function TodoApp() {
             <button
               className="priority-button"
               style={{
-                backgroundColor: priority === 'low' ? '#50F900' : '#FFFFFF',
-                boxShadow: priority === 'low' ? '0 0 5px 2px rgba(0, 0, 0, 0.5)' : 'none',
-                border: priority === 'low' ? '2px solid black' : 'none',
+                backgroundColor: priority === 'low' ? 'rgb(80, 249, 0, 0.4)' : 'rgb(80, 249, 0, 0.4)',
+                boxShadow: priority === 'low' ? '0 0 5px 2px rgba(0, 0, 0, 0.3)' : 'none',
+                border: priority === 'low' ? '2px solid black' : 'none',height: '27px', borderRadius: '5px'
               }}
               onClick={() => handlePriorityClick('low')}
             >
@@ -292,6 +292,10 @@ function TodoApp() {
             </button>
           </div>
         </div>
+
+        <div className='col1-child19'>New Row 1</div>
+          <div className='col1-child20'>New Row 2</div>
+          <div className='col1-child21'>New Row 3</div>
         <div className='row1 col2' style={{ display: 'flex', justifyContent: 'flex-start' }}>
           <div className="col2-child1" style={{ fontSize: 14, color: 'rgba(0, 0, 0, 0.5)' }}>
             <div>CREATED</div>
