@@ -12,7 +12,7 @@
     grid-template-rows: repeat(11, 1fr);
     outline: 1px solid black;
     width: 830px;
-    height: 600px;
+    height: 500px;
   }
   
   .taskContainer > div {
@@ -51,8 +51,8 @@
     flex-direction: column; /* Set flex-direction to column */
     outline: 1px solid black;
     padding: 5px;
-    padding-left: 135px;
     justify-content: flex-start; /* Align to the top/left */
+    padding-left: 70px;
   }
   
   .col2-child2 {
@@ -62,6 +62,7 @@
     outline: 1px solid black;
     padding: 5px;
     justify-content: flex-start; /* Align to the top/left */
+    margin-left: 20px;
   }
   
   
@@ -109,6 +110,11 @@
     justify-content: flex-start; /* Align to the top/left */
     outline: 1px solid black;
   }
+
+  .col1-child6-3{
+    display: flex;
+    align-items: center; /* Center vertically */
+  }
   
   .row4 {
     grid-row: 4;
@@ -144,9 +150,7 @@
     display: flex;
     align-items: center;
     flex-direction: column; /* Set flex-direction to column */
-    outline: 1px solid black;
     justify-content: flex-start; /* Align to the top/left */
-    outline: 1px solid black;
     padding: 5px;
 
   }
@@ -181,17 +185,27 @@
 
   }
 
-  .col1-child12 {
+  /* .col1-child12 {
     display: flex;
     align-items: center;
+    justify-content: flex-start; /* Align elements to the left */
+    /* outline: 1px solid black;
+    justify-content: flex-start; /* Align to the top/left */
+    /* outline: 1px solid black;
+    padding: 5px; */ 
+
+  /* }  */
+  
+  .col1-child12 {
+    display: flex;
     flex-direction: column; /* Set flex-direction to column */
     outline: 1px solid black;
-    justify-content: flex-start; /* Align to the top/left */
-    outline: 1px solid black;
     padding: 5px;
-
   }
   
+  .col1-child12 select {
+    margin-right: 10px; /* Add space between select and button */
+  }
   .row6 {
     grid-row: 6;
   }
@@ -263,15 +277,14 @@
 
   }
 
+
+
   .col1-child18 {
     display: flex;
     align-items: center;
-    flex-direction: column; /* Set flex-direction to column */
-    outline: 1px solid black;
-    justify-content: flex-start; /* Align to the top/left */
-    outline: 1px solid black;
-    padding: 5px;
-
+    justify-content: flex-start; /* Align buttons to the left */
+    gap: 5px; /* Add space between buttons */
+    outline: 1px solid black; /* Add outline for debugging */
   }
   
   .row8 {
@@ -293,6 +306,7 @@
   .col1 {
     grid-column: 1;
     display: flex;
+    width: 450px;
   }
   
   .col2 {
@@ -300,5 +314,38 @@
     display: flex;
   }
   
+  .col1-child6 select {
+    display: inline-block; /* Make the select elements inline */
+    margin-right: 10px; /* Add some space between the select elements */
+  }
   
+  .selectedMembers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 5px;
+  }
+  
+  .selectedMember {
+    background-color: #00B884;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .selectedMember:hover {
+    background-color: #ddd;
+  }
+
+  .Task_forms .taskContainer .row7 .col1-child18 {
+    display: flex;
+    align-items: center;
+  }
+  
+  .Task_forms .taskContainer .row7 .col1-child18 .priority-button {
+    margin-right: 5px;
+  }
+
+
   
