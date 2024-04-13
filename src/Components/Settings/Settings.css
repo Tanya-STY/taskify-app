@@ -15,7 +15,7 @@
     padding-right: 20px;
     /* Add padding to the right side */
     position: relative;
-    right: 120px;
+    right: 150px;
 }
 
 .right-section {
@@ -72,7 +72,20 @@
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    padding-left: 30px;
 }
+
+.input-with-icon {
+    position: relative;
+  }
+  
+  .input-icon {
+    position: absolute;
+    left: 10px; /* Adjust the position of the icon */
+    top: 40%;
+    transform: translateY(-50%);
+    color: #ccc; /* Adjust the color of the icon */
+  }
 
 .bottom-section {
     margin-top: auto;

@@ -1,0 +1,100 @@
+/* Chat.css */
+
+.chat-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    position: fixed;
+    top: 12%;
+    left: 25%;
+}
+
+.file-icon {
+    margin-right: 10px; /* Adjust the spacing as needed */
+  }
+
+.chat-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.separator {
+    margin: 20px auto;
+    width: 80%;
+    border-top: 1px solid #ccc;
+  }
+
+.chat-messages {
+    margin-bottom: 20px;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.message-sender-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.sara-message .message-sender-icon {
+    background-color: #ffb6c1; /* Light pink */
+    margin-left: auto; /* Move Sara's icon to the right */
+}
+
+.omar-message .message-sender-icon {
+    background-color: #6495ed; /* Cornflower blue */
+}
+
+.message-text {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.chat-input {
+    display: flex;
+    align-items: center;
+}
+
+.chat-input input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.chat-input button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #7B68EE; /* Medium purple */
+    color: #fff;
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    background-color: #6a5acd; /* Slate blue */
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    .chat-container {
+        left: 5%;
+    }
+}

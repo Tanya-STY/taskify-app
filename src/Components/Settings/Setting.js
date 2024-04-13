@@ -1,7 +1,6 @@
 import React from "react";
 import "./Settings.css";
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-gxZXIk3yc8h7nt1sWZG75h3vqD2vB2TmUpQ+gUpAitvSXcBOOVzIya5A6EZaxEWM" crossorigin="anonymous"/>
-
+import { FaEnvelope } from "react-icons/fa";
 
 const Settings = () => {
   return (
@@ -17,7 +16,10 @@ const Settings = () => {
         </div>
         <div className="field">
           <label className="label email-label">Email</label>
+          <div className="input-with-icon">
+          <FaEnvelope className="input-icon" />
           <input type="email" className="big-input email-input" placeholder="Enter your email"/>
+        </div>
         </div>
       </div>
       <div className="right-section">
