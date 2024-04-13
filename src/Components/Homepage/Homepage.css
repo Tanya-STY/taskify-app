@@ -1,0 +1,86 @@
+.homepage-banner {
+  display: flex;
+  width: 60%;
+  height: auto;
+  max-height: 185px;
+  margin: auto;
+  border-radius: 8px;
+  margin-top: 20px;
+  position: relative;
+  font-family: "Exo 2";
+  color: white;
+}
+
+.homepage-image {
+  height: 100%;
+  width: 100%;
+  max-height: 185px;
+  object-fit: cover;
+  border-radius: 15px;
+  position: relative;
+}
+
+.list-name-homepage {
+  font-size: 2.2vw;
+  position: absolute;
+  font-weight: 650;
+  right: 0;
+  padding-right: 3%;
+  margin-top: 1.5%;
+}
+
+.homepage-date {
+  font-size: 2vw;
+  position: absolute;
+  font-weight: 600;
+  left: 0;
+  padding-left: 3%;
+  margin-top: 1.5%;
+}
+
+.homepage-welcome {
+  font-size: 2vw;
+  position: absolute;
+  font-weight: 600;
+  left: 0;
+  padding-left: 3%;
+  bottom: 0;
+  margin-bottom: 4.5%;
+}
+
+.homepage-welcome-message {
+  font-size: 1.5vw;
+  position: absolute;
+  left: 0;
+  padding-left: 3%;
+  bottom: 0;
+  margin-bottom: 1.5%;
+}
+
+.bell-icon-homepage {
+  width: 4%;
+  height: auto;
+  position: absolute;
+  border-radius: 50%;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 2%;
+  margin-right: 3%;
+}
+
+.homepage-search{
+  display: flex;
+  width: 60%;
+  height: auto;
+  margin: auto;
+  margin-top: 10px;
+  position: relative;
+}
+
+.magnify {
+  width: 3%;
+}
+
+.search-bar {
+  width: 100%;
+}
