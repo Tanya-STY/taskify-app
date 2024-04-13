@@ -1,0 +1,130 @@
+.settings-container {
+    background-color: #CDCDCD;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 200px;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.left-section {
+    width: 100%;
+    max-width: 300px;
+    padding-right: 20px;
+    /* Add padding to the right side */
+    position: relative;
+    right: 120px;
+}
+
+.right-section {
+    width: 100%;
+    max-width: 300px;
+    padding-left: 20px;
+    /* Add padding to the left side */
+    position: relative;
+    left: 120px;
+    top: -205px;
+}
+
+.label {
+    color: #232360;
+    margin-bottom: 5px;
+    text-align: left;
+    position: relative;
+    left: -70px;
+    /* Align the text to the left */
+}
+
+/* Adjust the position of the label for Display Name */
+.display-name-label {
+    left: -60px;
+    /* Adjust the left position as needed */
+}
+
+/* Adjust the position of the label for Email */
+.email-label {
+    left: -90px;
+    /* Adjust the left position as needed */
+}
+
+.small-input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.big-input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.email-input {
+    width: calc(100% - -120px);
+    /* Adjust width for email input */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.bottom-section {
+    margin-top: auto;
+    /* Pushes the button to the bottom */
+    display: flex;
+    justify-content: center;
+    /* Center the button horizontally */
+}
+
+.save-button {
+    background-color: #7B68EE;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 50px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .settings-container {
+        padding: 20px 10px;
+    }
+
+    .left-section, .right-section {
+        max-width: 100%;
+        padding: 0;
+        margin-bottom: 20px;
+        position: static;
+    }
+
+    .right-section {
+        top: 0;
+        left: 0;
+    }
+
+    .label {
+        text-align: left;
+        position: static;
+        left: auto;
+    }
+
+    .display-name-label, .email-label {
+        left: -8vw; /* Adjust as needed */
+    }
+
+    .save-button {
+        padding: 10px 20px;
+    }
+
+    .email-input {
+        max-width: 90%; /* Make email input responsive */
+    }
+}
