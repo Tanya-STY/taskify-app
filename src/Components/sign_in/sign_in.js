@@ -1,7 +1,7 @@
 import React from "react";
 import './sign_in.css';
 import { useState } from "react";
-//import {useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 //text data to verify email and password
 import textData from '../Data/data.txt';
@@ -12,7 +12,7 @@ import image_right_side from '../../image/image_right_side_signin.png' ;
 
 function Sign_in () {
 
-    //const navigate = useNavigate();
+    const navigate = useNavigate();
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -40,7 +40,7 @@ function Sign_in () {
 
             if (text.includes(email + ' ' + password)) {
             console.log('Email and password found ');
-            //navigate('/Home');
+            navigate('/Homepage');
             
             } else {
             console.log('Email and/or password not found.');
