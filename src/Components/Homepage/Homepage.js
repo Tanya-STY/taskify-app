@@ -32,8 +32,11 @@ const Homepage = () => {
         </Link>
       </div>
       <div className="homepage-search">
-        <input type="text" placeholder="Tasks, Tags, Title, etc." className="search-bar" />
-        <button className="button-design">New Task</button>
+        <input type="text" placeholder="Tasks, Tags, Title, etc." className="search-bar-homepage" />
+        <button className="new-task-button">New Task</button>
+      </div>
+      <div className="homepage-history">
+      <button className="history-button">History</button>
       </div>
     </>
   );
