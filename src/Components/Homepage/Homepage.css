@@ -1,3 +1,7 @@
+body{
+  font-family: "Exo 2";
+}
+
 .homepage-banner {
   display: flex;
   width: 60%;
@@ -7,7 +11,6 @@
   border-radius: 8px;
   margin-top: 20px;
   position: relative;
-  font-family: "Exo 2";
   color: white;
 }
 
@@ -68,7 +71,7 @@
   margin-right: 3%;
 }
 
-.homepage-search{
+.homepage-search {
   display: flex;
   width: 60%;
   height: auto;
@@ -77,10 +80,32 @@
   position: relative;
 }
 
-.magnify {
-  width: 3%;
-}
-
 .search-bar {
   width: 100%;
+  border-radius: 9px;
+  height: 5vh;
+  background-repeat: no-repeat;
+  background-image: url("../Image/magnify-icon.png");
+  background-size: 2.5%;
+  padding-left: 4.5%;
+  background-position: 1%;
+  border: 1.8px solid #ccc;
+}
+
+.search-bar::placeholder {
+  color: #4486e9; /* Adjust placeholder color as needed */
+  font-size: 0.8vw;
+  font-weight: 600;
+}
+
+.button-design{
+  width: 20%;
+  margin-left: 1.5%;
+  border-radius: 9px;
+  border: none;
+  font-family: "Exo 2";
+  color: white;
+  font-weight: 600;
+  background-color: #4486e9;
+  font-size: 1.1vw;
 }

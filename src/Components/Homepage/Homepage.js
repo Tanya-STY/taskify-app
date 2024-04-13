@@ -2,7 +2,7 @@ import React from "react";
 import "./Homepage.css";
 import homepageimg from "../Image/homepage-image.jpg";
 import bellicon from "../Image/bell-icon.png";
-import magnify from "../Image/magnify-icon.png"
+import "../Image/magnify-icon.png";
 import { Link } from "react-router-dom";
 
 const Homepage = () => {
@@ -32,8 +32,8 @@ const Homepage = () => {
         </Link>
       </div>
       <div className="homepage-search">
-        {/* <img src={magnify} alt="magnify icon" className="magnify"/> */}
-        <input type="text" placeholder="Search.." className="search-bar" />
+        <input type="text" placeholder="Tasks, Tags, Title, etc." className="search-bar" />
+        <button className="button-design">New Task</button>
       </div>
     </>
   );
