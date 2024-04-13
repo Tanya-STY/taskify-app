@@ -18,7 +18,7 @@ const Homepage = () => {
     .replace(/,/g, "-");
 
   return (
-    <>
+    <div className="container-homepage">
       <div className="homepage-banner">
         <img src={homepageimg} alt="banner" className="homepage-image" />
         <p className="list-name-homepage">My To-Do List</p>
@@ -38,7 +38,7 @@ const Homepage = () => {
       <div className="homepage-history">
       <button className="history-button">History</button>
       </div>
-    </>
+    </div>
   );
 };
 
