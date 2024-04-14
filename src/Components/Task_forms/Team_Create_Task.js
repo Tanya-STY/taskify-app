@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import '../Task_forms/Task_forms.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen, faClock, faTag, faUser, faFilter, faStarHalfStroke } from '@fortawesome/free-solid-svg-icons';
+import HomepageBanner from '../HomepageBanner/HomepageBanner';
+
 
 
 
@@ -140,6 +142,8 @@ function TodoApp() {
 
 
   return (
+    <div>
+      <HomepageBanner/>
     <div className='Task_forms'>
     <div className='taskContainer'>
       <div className='row1 col1'>
@@ -396,6 +400,7 @@ function TodoApp() {
         <div >
           </div>
       </div>
+    </div>
     </div>
   );
 }
