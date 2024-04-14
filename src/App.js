@@ -9,7 +9,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Homepage />} />
+        <Route path='/' element={<Sign_in/>} />
+        <Route path="Homepage" element={<Homepage />} />
         {/* <Route path="/history" element={<History />} /> */}
       </Routes>
     </BrowserRouter>
