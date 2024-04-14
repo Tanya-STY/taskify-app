@@ -1,0 +1,131 @@
+.full_screen{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+.left_side_form_section{
+    border: black solid;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    flex-grow: 2;
+    height: 100vh;
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+}
+.right_side_image_section{
+    height: 100vh;
+    display: flex;
+    flex-grow: 7;
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    border: 0; /* Reset border */
+}
+.right_side_image_section img{
+    width: 100%;
+}
+.title_text{
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Playfair Display';
+    font-size: 7em;
+    font-weight: bold;
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+}
+.form_section{
+    display: flex;
+    padding-left: 4em;
+    padding-right: 4em;
+    flex-direction: column;
+    flex-grow:3;
+}
+.welcome_back_message{
+    display: flex;
+    align-items: flex-start;
+    font-weight: bold;
+    font-family: 'Playfair Display';
+    font-size: 4em;
+    height:10%;
+}
+.label_email{
+    display:flex;
+    align-items: flex-end;
+    font-family: 'Plus Jakarta Sans';
+    color: #C3C3C3;
+    font-size: 4em;
+    height:15%;
+    padding-left:1%;
+}
+.input_email{
+    display:flex;
+    align-items: flex-start;
+    height: 2em;
+    border-radius: 50px;
+    background-color: rgba(195, 195, 195, 0.15); 
+    font-size: 4em;
+    padding-left:2%;
+    color: #808080;
+}
+.input_email::placeholder{
+    font-family: 'Plus Jakarta Sans';
+    padding-left:1%;
+}
+
+.label_password{
+    display: flex;
+    align-items: flex-end;
+    font-family: 'Plus Jakarta Sans';
+    color: #C3C3C3;
+    font-size: 4em;
+    height:15%;
+    padding-left:1%;
+}
+.input_password{
+    display:flex;
+    align-items: flex-start;
+    height: 2em;
+    border-radius: 50px;
+    background-color: rgba(195, 195, 195, 0.15); 
+    font-size: 4em;
+    padding-left:2%;
+    color: #808080;
+}
+.input_password::placeholder{
+    font-family: 'Plus Jakarta Sans';
+    padding-left:1%;
+}
+.button_container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 25%
+}
+.button_signin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: #B573ED80;
+    color: white;
+    font-family: 'Plus Jakarta Sans';
+    border-radius: 50px;
+    font-size: 4em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+.bottom_text{
+    display: flex;
+    justify-content: center;
+    font-size: 3em;
+}
+.empty_space_holder{
+    display: flex;
+    flex-grow:1;
+}

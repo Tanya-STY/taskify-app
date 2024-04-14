@@ -1,0 +1,90 @@
+.taskbox {
+  width: 360px;
+  height: 120px;
+  display: inline-block;
+  margin: 1.5%;
+  border-radius: 15px;
+  border: 3px solid #ccc;
+  padding: 10px;
+  position: relative;
+}
+
+.title-taskbox {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0px;
+  display: inline-block;
+}
+
+.tag-taskbox {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  background-color: rgb(167, 250, 250);
+  border-radius: 20px;
+  padding: 5px 30px;
+  color: rgb(97, 123, 230);
+  position: absolute;
+  right: 10px;
+  bottom: 90px;
+}
+
+.description-taskbox {
+  color: #777474;
+  margin: 0px;
+}
+
+.date-taskbox {
+  margin: 0px;
+  font-size: 14.5px;
+  background-color: #d1caee;
+  display: inline-block;
+  color: #7665c2;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 5px 15px;
+  margin-top: 40px;
+}
+
+.priority-taskbox {
+  margin: 0px;
+  display: inline-block;
+  background-color: #ccc;
+  border-radius: 6px;
+  padding: 5px 12px;
+  font-size: 14.5px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.low-priority {
+    color: rgb(19, 85, 19); /* Color for low priority */
+    background-color: rgb(152, 248, 152);
+  }
+  
+  .medium-priority {
+    color: rgb(245, 94, 7); /* Color for medium priority */
+    background-color: rgb(246, 189, 33);
+  }
+  
+  .high-priority {
+    color: rgb(122, 7, 7); /* Color for high priority */
+    background-color: rgb(243, 70, 70);
+  }
+
+
+.editicon-taskbox {
+  width: 22px;
+  position: absolute;
+  left: 330px;
+  bottom:25px;
+}
+
+.button-taskbox {
+  background-color: transparent;
+  border: none;
+}
+
+.button-taskbox:hover {
+  cursor: pointer;
+}
