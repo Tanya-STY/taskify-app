@@ -13,6 +13,8 @@ import TeamCreateTask from './Components/Task_forms/Team_Create_Task';
 import TeamViewTask from './Components/Task_forms/Team_View_Task';
 import UserCreateTask from './Components/Task_forms/User_Create_Task';
 import UserViewTask from './Components/Task_forms/User_View_Task';
+import History from "./Components/History/History.js";
+
 
 function App() {
   return (
@@ -30,6 +32,11 @@ function App() {
         <Route path="/UserViewTask" element={<UserViewTask />} />
 
 
+        <Route path="Homepage" element={<Homepage />} />
+        <Route path="Chat" element={<Chat />} />
+        <Route path="Settings" element={<Settings />} />
+        <Route path="HomepageBanner" element={<HomepageBanner />} />
+        <Route path="/History" element={<History />} />
       </Routes>
     </BrowserRouter>
   );
