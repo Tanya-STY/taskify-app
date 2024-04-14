@@ -1,22 +1,23 @@
 import React, { useState } from 'react';
 import '../Task_forms/Task_forms.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPen, faClock, faTag, faUser, faFilter, faStarHalfStroke } from '@fortawesome/free-solid-svg-icons';
+import { faPen, faClock, faTag, faUser, faFilter, faStarHalfStroke, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 
 
 function TodoApp() {
-  const [title, setTitle] = useState('');
-  const [subtitle, setSubtitle] = useState('');
+  const [title, setTitle] = useState('Develop Login Page');
+  const [subtitle, setSubtitle] = useState('Implement login');
 
-  const [tag, setTag] = useState('');
-  const [tags, setTags] = useState([]);
-  const [selectedList, setSelectedList] = useState('');
+  const [tag, setTag] = useState('UI');
+  const [tags, setTags] = useState(['UI']);
+  const [selectedList, setSelectedList] = useState('Sprint1');
   const [isListDropdownOpen, setIsListDropdownOpen] = useState(false);
-  const [priority, setPriority] = useState('');
+  const [priority, setPriority] = useState('medium');
 
-  const [selectedDate, setSelectedDate] = useState('');
-  const [selectedYear, setSelectedYear] = useState('');
+  const [selectedMonth, setSelectedMonth] = useState(6);
+  const [selectedDate, setSelectedDate] = useState('27');
+  const [selectedYear, setSelectedYear] = useState('2028');
 
 
   const handleKeyDown = (event) => {
@@ -49,7 +50,6 @@ function TodoApp() {
     <option key={index + 1} value={index + 1}>{month}</option>
   ));
 
-  const [selectedMonth, setSelectedMonth] = useState(1);
   const daysInMonth = new Date(new Date().getFullYear(), selectedMonth, 0).getDate();
   const dates = Array.from({ length: daysInMonth }, (_, i) => (
     <option key={i + 1} value={i + 1}>{i + 1}</option>
@@ -67,8 +67,8 @@ function TodoApp() {
     'Daniel', 'Sophia', 'Matthew', 'Isabella', 'Christopher', 'Mia', 'Andrew', 'Charlotte', 'Joseph', 'Amelia'
   ]);
 
-  const [selectedMembers, setSelectedMembers] = useState([]);
-  const [selectedMember, setSelectedMember] = useState('');
+  const [selectedMembers, setSelectedMembers] = useState(['Tanya', 'Shamma', 'Fadoua', 'Asmae']);
+  const [selectedMember, setSelectedMember] = useState();
 
   const handleMemberSelect = (member) => {
     if (member.trim() !== '') {
@@ -138,6 +138,19 @@ function TodoApp() {
     console.log('Task created successfully!');
   };
 
+  const [showConfirmation, setShowConfirmation] = useState(false);
+
+  const handleGarbageClick = () => {
+    setShowConfirmation(true);
+  };
+
+  const handleConfirmation = (confirmed) => {
+    if (confirmed) {
+      // Logic to delete the task
+      console.log('Task deleted');
+    }
+    setShowConfirmation(false);
+  };
 
   return (
     <div className='Task_forms'>
@@ -181,15 +194,18 @@ function TodoApp() {
           <div className='col1-child5'>Due Date</div>
           <div className='col1-child6'>
             <div className='col1-child6-3'>
-              <select className='mm' style={{padding:'5px', border:'1px solid #ccc', borderRadius:'5px', width:'60px'}}>
+              <select className='mm' style={{padding:'5px', border:'1px solid #ccc', borderRadius:'5px', width:'60px'}} value={selectedMonth}
+  onChange={(e) => setSelectedMonth(e.target.value)}>
                 {months}
                 <option value="MM" >MM</option>
               </select>
-              <select className='dd' style={{padding:'5px', border:'1px solid #ccc', borderRadius:'5px', width:'60px'}}>
+              <select className='dd' style={{padding:'5px', border:'1px solid #ccc', borderRadius:'5px', width:'60px'}} value={selectedDate}
+  onChange={(e) => setSelectedDate(e.target.value)}>
                 {dates}
                 <option value="DD">DD</option>
               </select>
-              <select className='yyyy' style={{padding:'5px', border:'1px solid #ccc', borderRadius:'5px', width:'80px'}}>
+              <select className='yyyy' style={{padding:'5px', border:'1px solid #ccc', borderRadius:'5px', width:'80px'}} value={selectedYear}
+  onChange={(e) => setSelectedYear(e.target.value)}>
                 {years}
                 <option value="YYYY">YYYY</option>
               </select>
@@ -231,37 +247,8 @@ function TodoApp() {
             </div>
           </div>
         </div>
-        <div className='row5 col1'>
-          <div className='col1-child10'>
-            <FontAwesomeIcon icon={faUser} style={{width:20, height:20}}/>
-          </div>
-          <div className='col1-child11'>Assign</div>
-          <div className='col1-child12'>
-          <div className="memberDropdown">
-              <select
-                value={selectedMember}
-                onChange={(e) => setSelectedMember(e.target.value)}
-                onKeyDown={handleMemberKeyDown}
-              >
-                <option value="">Select a member</option>
-                {teamMembers.map((member) => (
-                  <option
-                    key={member}
-                    value={member}
-                    onClick={() => handleMemberSelect(member)}
-                  >
-                    {member}
-                  </option>
-                ))}
-              </select>
-              <button onClick={addMember} style={{padding:'5px', border:'1px solid #ccc', borderRadius:'5px', width:'50px'}}>Add</button>
-
-            </div>
-            <div className="selectedMembers">
-              {renderMemberTags()}
-            </div>
-          </div>
-        </div>
+          
+          
         <div className='row6 col1'>
           <div className='col1-child13'>
             <FontAwesomeIcon icon={faFilter} style={{width:20, height:20}}/>
@@ -340,7 +327,6 @@ function TodoApp() {
           </div>
         </div>
 
-        <div className='col1-child19'></div>
         <div className='col1-child20' style={{paddingBottom:'10px', paddingTop:'20px'}}>
           <FontAwesomeIcon icon={faPen} style={{ width: '20px', height: '20px', paddingRight: '15px' }} />
           Description/Notes
@@ -363,36 +349,60 @@ function TodoApp() {
           </div>
         </div>
         <div className='row2 col2' style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
-          <label htmlFor="fileInput" className="fileInputLabel" >
-            Attach File
-          </label>
-          <input
-            id="fileInput"
-            type="file"
-            accept=".csv, .xlsx, .xls, .pdf"
-            style={{ display: 'none' }}
-            onChange={handleFileChange}
-          />
+        <button className='taskCompletedButton' >
+              Task Completed
+            </button>
+          
         </div>
         <div className='row3 col2' style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
-          {selectedFile && (
+          <label htmlFor="fileInput" className="fileInputLabel" >
+              Attach File
+            </label>
+            <input
+              id="fileInput"
+              type="file"
+              accept=".csv, .xlsx, .xls, .pdf"
+              style={{ display: 'none' }}
+              onChange={handleFileChange}
+            />
+          
+        </div>
+        <div className='row4 col2' style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
+        {selectedFile && (
             <div style={{ border:'1px solid #ccc', borderRadius:'5px', width:'70%', height:'30px', display:'flex', justifyContent:'center', alignItems:'center'}}>
               <p>{selectedFile.name}</p>
               {/* You can display more information about the selected file if needed */}
             </div>
           )}
         </div>
-        <div className='row4 col2'></div>
         <div className='row5 col2'></div>
         <div className='row6 col2'></div>
         <div className='row7 col2'></div>
         <div className='row8 col2'></div>
         <div className='row9 col2'></div>
         <div className='row10 col2' style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-        <button className='createTaskButton' onClick={handleSubmit}>
-              Create Task
-            </button>
-        </div>
+          {showConfirmation && (
+          <div className="confirmation">
+            <div>Are you sure you want to permanently delete this task?</div>
+            <div>
+              <div>              
+                <button onClick={() => handleConfirmation(true)} style={{padding:'5px', border:'1px solid #ccc', borderRadius:'5px', width:'150px', marginBottom:'5px'}}>Yes, delete the task</button>
+              </div>
+
+              <div>              
+                <button onClick={() => handleConfirmation(false)} style={{padding:'5px', border:'1px solid #ccc', borderRadius:'5px', width:'60px'}}>Cancel</button>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Garbage icon */}
+        {/* <div className='row10 col2' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}> */}
+          {/* <FontAwesomeIcon icon={faTrash} className='garbageIcon' style={{ width: 20, height: 20 }} onClick={handleGarbageClick} /> */}
+        {/* </div> */}
+        {/* Replace the "Create Task" button with the garbage icon */}
+        <FontAwesomeIcon icon={faTrash} className='garbageIcon' style={{width:20, height:20}} onClick={handleGarbageClick}/>
+      </div>
         <div >
           </div>
       </div>
