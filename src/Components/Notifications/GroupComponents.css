@@ -1,0 +1,51 @@
+.div-tasks {
+
+    box-sizing: border-box;
+    display: flex; /* Use flexbox to align items */
+    flex-direction: row; /* Stack items vertically */
+    position: relative;
+    width: 800px;
+    height: 80px;
+    left: 0px;
+    top: 0px;
+
+    background: #FFFFFF;
+    border: 1px solid #C3C3C3;
+    /* Shadow */
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+}
+
+.div-tasks .circles {
+    position: absolute;
+    border-radius: 50%;
+    width: 66px;
+    height: 66px;
+    left: 20px;
+    top: 6px;
+    background: linear-gradient(180deg, rgba(181, 115, 237, 0.5) 21.97%, rgba(85, 204, 255, 0.3) 58.03%, rgba(85, 119, 255, 0.75) 82.58%);
+}
+
+.tasks-assigned{
+    position: relative;
+    width: 314.71px;
+    height: 50px;
+    left: 10px; /* Adjust left position to position it to the right of the circles */
+    top: 50%; /* Set top to 50% */ /* Align with the top of the parent container */
+    transform: translateY(-50%);
+}
+
+.new-task{
+    /* font-family: 'Work Sans'; */
+    /* top:50%; */
+    left: 0; /* Align with the left edge of the container */
+    /* margin: 0;  */
+    height: 21px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    
+    color: #000000;
+    
+}
