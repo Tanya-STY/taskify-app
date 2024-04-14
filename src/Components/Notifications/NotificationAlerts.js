@@ -1,5 +1,6 @@
 import { useState } from 'react'; // Import useState hook
 import "./NotificationAlerts.css";
+import Banner from '../HomepageBanner/HomepageBanner'
 
 const NotificationsAlerts = () => {
   // Use useState to manage the active button state
@@ -12,7 +13,7 @@ const NotificationsAlerts = () => {
 
   return (
     <div className="containerbox">
-      <div className='headerbox'>
+      {/* <div className='headerbox'>
         <div className="topbar">
           <div className="date">Monday - April 1st -2024</div>
           <div className="notif">Notifications</div>
@@ -26,7 +27,8 @@ const NotificationsAlerts = () => {
             <div className='cloche'></div>
           </div>
         </div>
-      </div>
+      </div> */}
+      <Banner title="Notification Page"/>
       <div className="alertbutton">
 
         <div className={`alerts ${activeButton === 'alerts' ? 'active' : ''}`} onClick={() => toggleButton('alerts')}>Alerts</div>

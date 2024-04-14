@@ -144,9 +144,11 @@
 }
 
 .tasks-assigned{
+    margin:10px 0 0;
     display: flex;
     flex-direction: column;
-    align-items:flex-start;
+    align-items: flex-start;
+    justify-content: center;
     width: 314.71px;
     height: 50px;
 }
@@ -161,7 +163,7 @@
 }
 
 .mini-cap {
-    margin: 8px 0 0 0;
+    margin: 5px 0 0 0;
 }
 
 
@@ -247,8 +249,8 @@
 }
 
 .separator {
-    width: 50px;
-    height: 100%; 
+    width:auto;
+    /* height: 100%;  */
     background-color: #ccc; 
     margin: 0 20px; 
   }

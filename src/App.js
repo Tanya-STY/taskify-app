@@ -19,9 +19,6 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/Notification" element={<NotificationsAlerts />} />
-
-      {/* </Routes> */}
-      {/* {/* <Routes> */}
         <Route path='/' element={<Sign_in/>} />
         <Route path="/Homepage" element={<Homepage />} />
         <Route path="/Chat" element={<Chat />} />
@@ -31,6 +28,7 @@ function App() {
         <Route path="/TeamViewTask" element={<TeamViewTask />} />
         <Route path="/UserCreateTask" element={<UserCreateTask />} />
         <Route path="/UserViewTask" element={<UserViewTask />} />
+
 
       </Routes>
     </BrowserRouter>
