@@ -1,4 +1,3 @@
-// HomepageBanner.js
 
 import React from "react";
 import homepageimg from "../Image/homepage-image.jpg";

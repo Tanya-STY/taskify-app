@@ -231,37 +231,6 @@ function TodoApp() {
             </div>
           </div>
         </div>
-        <div className='row5 col1'>
-          <div className='col1-child10'>
-            <FontAwesomeIcon icon={faUser} style={{width:20, height:20}}/>
-          </div>
-          <div className='col1-child11'>Assign</div>
-          <div className='col1-child12'>
-          <div className="memberDropdown">
-              <select
-                value={selectedMember}
-                onChange={(e) => setSelectedMember(e.target.value)}
-                onKeyDown={handleMemberKeyDown}
-              >
-                <option value="">Select a member</option>
-                {teamMembers.map((member) => (
-                  <option
-                    key={member}
-                    value={member}
-                    onClick={() => handleMemberSelect(member)}
-                  >
-                    {member}
-                  </option>
-                ))}
-              </select>
-              <button onClick={addMember} style={{padding:'5px', border:'1px solid #ccc', borderRadius:'5px', width:'50px'}}>Add</button>
-
-            </div>
-            <div className="selectedMembers">
-              {renderMemberTags()}
-            </div>
-          </div>
-        </div>
         <div className='row6 col1'>
           <div className='col1-child13'>
             <FontAwesomeIcon icon={faFilter} style={{width:20, height:20}}/>
