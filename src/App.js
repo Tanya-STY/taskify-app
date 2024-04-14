@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./Components/Homepage/Homepage";
 // import History from
+import Taskbox from "./Components/Taskbox/Taskbox";
 import "./App.css";
 import Sign_in from './Components/sign_in/sign_in.js';
 import Chat from './Components/Chat/Chat.js';
@@ -18,6 +19,7 @@ function App() {
         <Route path="Settings" element={<Settings />} />
         <Route path="HomepageBanner" element={<HomepageBanner />} />
         {/* <Route path="/history" element={<History />} /> */}
+        <Route path="/test" element={<Taskbox />} />
       </Routes>
     </BrowserRouter>
   );
