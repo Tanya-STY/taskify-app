@@ -6,7 +6,20 @@ import bellicon from "../Image/bell-icon.png";
 import { Link } from "react-router-dom";
 import "./HomepageBanner.css";
 
-const HomepageBanner = ({ formattedDate, title }) => {
+
+
+const HomepageBanner = ({ title }) => {
+  const currentDate = new Date();
+  const options = {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  };
+  const formattedDate = currentDate
+    .toLocaleDateString("en-US", options)
+    .replace(/,/g, "-");
+
   return (
     <div className="homepage-banner">
       <img src={homepageimg} alt="banner" className="homepage-image" />
