@@ -7,6 +7,8 @@ import Sign_in from './Components/sign_in/sign_in.js';
 import Chat from './Components/Chat/Chat.js';
 import Settings from './Components/Settings/Setting.js'
 import HomepageBanner from "./Components/HomepageBanner/HomepageBanner.js";
+import History from "./Components/History/History.js";
+
 
 function App() {
   return (
@@ -17,7 +19,7 @@ function App() {
         <Route path="Chat" element={<Chat />} />
         <Route path="Settings" element={<Settings />} />
         <Route path="HomepageBanner" element={<HomepageBanner />} />
-        <Route path="/test" element={<Taskbox />} />
+        <Route path="/History" element={<History />} />
       </Routes>
     </BrowserRouter>
   );

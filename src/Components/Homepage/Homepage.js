@@ -3,13 +3,12 @@ import "./Homepage.css";
 import "../Image/magnify-icon.png";
 import HomepageBanner from "../HomepageBanner/HomepageBanner";
 import Taskbox from "../Taskbox/Taskbox";
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
-
   return (
-<>
+    <>
       <HomepageBanner title="My To-Do List" /> {/* Pass the title prop here */}
-
       <div className="homepage-search">
         <input
           type="text"
@@ -17,7 +16,9 @@ const Homepage = () => {
           className="search-bar-homepage"
         />
         <button className="new-task-button">New Task</button>
-        <button className="history-button">History</button>
+        <Link to="/History" className="history-button">
+          History
+        </Link>
       </div>
       <div className="tasks-homepage">
         <Taskbox
@@ -62,7 +63,6 @@ const Homepage = () => {
           date="20 April 2024"
           priority="High"
         />
-
       </div>
     </>
   );
