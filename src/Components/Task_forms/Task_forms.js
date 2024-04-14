@@ -4,7 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen, faClock, faTag, faUser, faFilter, faStarHalfStroke } from '@fortawesome/free-solid-svg-icons';
 
 
+
 function TodoApp() {
+  const [title, setTitle] = useState('');
+  const [subtitle, setSubtitle] = useState('');
+
   const [tag, setTag] = useState('');
   const [tags, setTags] = useState([]);
   const [selectedList, setSelectedList] = useState('');
@@ -113,22 +117,47 @@ function TodoApp() {
     setPriority(value);
   };
 
+  const [selectedFile, setSelectedFile] = useState(null);
+
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    setSelectedFile(file);
+  };
+
   return (
     <div className='Task_forms'>
-      <div className='taskContainer'>
-        <div className='row1 col1'>
-          <div className="col1-child1">
-            <div style={{height:'18px', width:'18px', borderRadius:5, backgroundColor:'#00B884', outline:'1px solid black'}}></div>
-          </div>
-          <div className="col1-child2" style={{fontSize:22}}>
-            TITLE OF THE TASK
-          </div>
+    <div className='taskContainer'>
+      <div className='row1 col1'>
+        <div className="col1-child1">
+          <div style={{height:'18px', width:'18px', borderRadius:5, backgroundColor:'#00B884', outline:'1px solid black'}}></div>
+        </div>
+        <div className="col1-child2" style={{fontSize:22}}>
+          <input
+            type="text"
+            placeholder="Enter Title of The Task"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            style={{border: 'none', outline: 'none', fontSize: 22, width: '250px'}}
+          />
+        </div>
           <div className="col1-child3">
             <FontAwesomeIcon icon={faPen} style={{width:20, height:20}}/>
           </div>
         </div>
         <div className='row2 col1'>
-          <p>row 2</p>
+        <div className="col1-child1">
+          <div style={{height:'18px', width:'18px', borderRadius:5, backgroundColor:'#ffffff', outline:'1px white'}}></div>
+        </div>
+        <div className="col1-child2" style={{fontSize:16}}>
+          <input
+            type="text"
+            placeholder="Enter a Subtitle"
+            value={subtitle}
+            onChange={(e) => setSubtitle(e.target.value)}
+            style={{border: 'none', outline: 'none', fontSize: 18, width: '250px', paddingBottom: '20px'}}
+          />
+        </div>
+
         </div>
         <div className='row3 col1'>
           <div className='col1-child4'>
@@ -137,15 +166,15 @@ function TodoApp() {
           <div className='col1-child5'>Due Date</div>
           <div className='col1-child6'>
             <div className='col1-child6-3'>
-              <select>
+              <select className='mm' style={{padding:'5px', border:'1px solid #ccc', borderRadius:'5px', width:'60px'}}>
                 {months}
-                <option value="MM">MM</option>
+                <option value="MM" >MM</option>
               </select>
-              <select>
+              <select className='dd' style={{padding:'5px', border:'1px solid #ccc', borderRadius:'5px', width:'60px'}}>
                 {dates}
                 <option value="DD">DD</option>
               </select>
-              <select>
+              <select className='yyyy' style={{padding:'5px', border:'1px solid #ccc', borderRadius:'5px', width:'80px'}}>
                 {years}
                 <option value="YYYY">YYYY</option>
               </select>
@@ -166,15 +195,17 @@ function TodoApp() {
                     value={tag}
                     onChange={(e) => setTag(e.target.value)}
                     onKeyDown={handleKeyDown}
+                    style={{padding:'5px', border:'1px solid #ccc', borderRadius:'5px', width:'150px'}}
                   />
                 ) : (
                   <div
                     style={{
                       display: 'inline-block',
-                      backgroundColor: '#00B884',
-                      color: 'white',
-                      padding: '5px 10px',
-                      borderRadius: '5px',
+                      backgroundColor: 'rgba(253, 113, 175, 0.3)',
+                      color: 'rgba(253, 113, 175, 1)',
+                      paddingLeft: '10px',
+                      paddingRight: '10px',
+                      borderRadius: '33px',
                       cursor: 'pointer',
                     }}
                     onClick={removeTag}
@@ -208,7 +239,8 @@ function TodoApp() {
                   </option>
                 ))}
               </select>
-              <button onClick={addMember}>Add</button>
+              <button onClick={addMember} style={{padding:'5px', border:'1px solid #ccc', borderRadius:'5px', width:'50px'}}>Add</button>
+
             </div>
             <div className="selectedMembers">
               {renderMemberTags()}
@@ -294,8 +326,17 @@ function TodoApp() {
         </div>
 
         <div className='col1-child19'>New Row 1</div>
-          <div className='col1-child20'>New Row 2</div>
-          <div className='col1-child21'>New Row 3</div>
+        <div className='col1-child20' style={{paddingBottom:'10px', paddingTop:'20px'}}>
+          <FontAwesomeIcon icon={faPen} style={{ width: '20px', height: '20px', paddingRight: '15px' }} />
+          Description/Notes
+        </div>
+
+          <div className='col1-child21'>
+          <textarea
+            style={{ width: '430px', height: '175px', resize: 'none', borderRadius: '10px', backgroundColor: 'rgba(195, 195, 195, 0.3)', padding:'10px' }}
+            placeholder="Description/Notes"
+          ></textarea>
+          </div>
         <div className='row1 col2' style={{ display: 'flex', justifyContent: 'flex-start' }}>
           <div className="col2-child1" style={{ fontSize: 14, color: 'rgba(0, 0, 0, 0.5)' }}>
             <div>CREATED</div>
@@ -306,16 +347,39 @@ function TodoApp() {
             <div>{getFormattedDate()}</div>
           </div>
         </div>
-        <div className='row2 col2'></div>
-        <div className='row3 col2'></div>
+        <div className='row2 col2' style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
+          <label htmlFor="fileInput" className="fileInputLabel" >
+            Attach File
+          </label>
+          <input
+            id="fileInput"
+            type="file"
+            accept=".csv, .xlsx, .xls, .pdf"
+            style={{ display: 'none' }}
+            onChange={handleFileChange}
+          />
+        </div>
+        <div className='row3 col2' style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
+          {selectedFile && (
+            <div style={{ border:'1px solid #ccc', borderRadius:'5px', width:'70%', height:'30px', display:'flex', justifyContent:'center', alignItems:'center'}}>
+              <p>{selectedFile.name}</p>
+              {/* You can display more information about the selected file if needed */}
+            </div>
+          )}
+        </div>
         <div className='row4 col2'></div>
         <div className='row5 col2'></div>
         <div className='row6 col2'></div>
         <div className='row7 col2'></div>
         <div className='row8 col2'></div>
         <div className='row9 col2'></div>
-        <div className='row10 col2'></div>
-        <div className='row11 col2'></div>
+        <div className='row10 col2' style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        <button className='createTaskButton'>
+              Create Task
+            </button>
+        </div>
+        <div >
+          </div>
       </div>
     </div>
   );

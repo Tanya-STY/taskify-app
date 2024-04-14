@@ -4,20 +4,21 @@
     align-items: center; /* Center vertically */
     font-family: 'Plus Jakarta Sans';
     height: 100vh; /* Set height to viewport height */
+
   }
   
   .taskContainer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(11, 1fr);
-    outline: 1px solid black;
     width: 830px;
-    height: 500px;
+    height: 550px;
+    padding: 25px;
+    outline: 1px solid black;
+    border-radius: 25px;
   }
   
-  .taskContainer > div {
-    outline: 1px solid black;
-  }
+
   
   .row1 {
     grid-row: 1;
@@ -49,20 +50,18 @@
     display: flex;
     align-items: center;
     flex-direction: column; /* Set flex-direction to column */
-    outline: 1px solid black;
     padding: 5px;
     justify-content: flex-start; /* Align to the top/left */
-    padding-left: 70px;
+    padding-left: 20px;
   }
   
   .col2-child2 {
     display: flex;
     align-items: center;
     flex-direction: column; /* Set flex-direction to column */
-    outline: 1px solid black;
     padding: 5px;
     justify-content: flex-start; /* Align to the top/left */
-    margin-left: 20px;
+    margin-left: 10px;
   }
   
   
@@ -78,10 +77,8 @@
     display: flex;
     align-items: center;
     flex-direction: column; /* Set flex-direction to column */
-    outline: 1px solid black;
     padding: 5px;
     justify-content: flex-start; /* Align to the top/left */
-    outline: 1px solid black;
     padding-left: 30px;
     color: #82808F;
 
@@ -91,10 +88,8 @@
   display: flex;
   align-items: center;
   flex-direction: column; /* Set flex-direction to column */
-  outline: 1px solid black;
   padding: 5px;
   justify-content: flex-start; /* Align to the top/left */
-  outline: 1px solid black;
   color: #82808F;
   text-align: left; /* Align text to the left */
   padding-right: 20px ;
@@ -105,10 +100,8 @@
     display: flex;
     align-items: center;
     flex-direction: column; /* Set flex-direction to column */
-    outline: 1px solid black;
     padding: 5px;
     justify-content: flex-start; /* Align to the top/left */
-    outline: 1px solid black;
   }
 
   .col1-child6-3{
@@ -124,9 +117,7 @@
     display: flex;
     align-items: center;
     flex-direction: column; /* Set flex-direction to column */
-    outline: 1px solid black;
-    justify-content: flex-start; /* Align to the top/left */
-    outline: 1px solid black;
+    justify-content: center; /* Center vertically */
     padding: 5px;
     padding-left: 30px;
     color: #82808F;
@@ -137,22 +128,23 @@
     display: flex;
     align-items: center;
     flex-direction: column; /* Set flex-direction to column */
-    outline: 1px solid black;
-    justify-content: flex-start; /* Align to the top/left */
+    justify-content: center; /* Center vertically */
     padding: 5px;
     color: #82808F;
-    padding-right: 57px ;
-
+    padding-right: 57px;
   }
-
+  
   .col1-child9 {
     display: flex;
     align-items: center;
     flex-direction: column; /* Set flex-direction to column */
-    justify-content: flex-start; /* Align to the top/left */
-    padding: 5px;
-
+    justify-content: center; /* Center vertically */
+    padding-left: 3px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
   }
+  
   
   .row5 {
     grid-row: 5;
@@ -162,9 +154,7 @@
     display: flex;
     align-items: center;
     flex-direction: column; /* Set flex-direction to column */
-    outline: 1px solid black;
     justify-content: flex-start; /* Align to the top/left */
-    outline: 1px solid black;
     padding: 5px;
     padding-left: 30px;
     color: #82808F;
@@ -175,9 +165,7 @@
     display: flex;
     align-items: center;
     flex-direction: column; /* Set flex-direction to column */
-    outline: 1px solid black;
     justify-content: flex-start; /* Align to the top/left */
-    outline: 1px solid black;
     padding: 5px;
     color: #82808F;
     padding-right: 37px ;
@@ -197,8 +185,8 @@
   
   .col1-child12 {
     display: flex;
+    align-items: center; /* Center vertically */
     flex-direction: column; /* Set flex-direction to column */
-    outline: 1px solid black;
     padding: 5px;
   }
   
@@ -213,9 +201,7 @@
     display: flex;
     align-items: center;
     flex-direction: column; /* Set flex-direction to column */
-    outline: 1px solid black;
     justify-content: flex-start; /* Align to the top/left */
-    outline: 1px solid black;
     padding: 5px;
     padding-left: 30px;
     color: #82808F;
@@ -226,9 +212,7 @@
     display: flex;
     align-items: center;
     flex-direction: column; /* Set flex-direction to column */
-    outline: 1px solid black;
     justify-content: flex-start; /* Align to the top/left */
-    outline: 1px solid black;
     padding: 5px;
     color: #82808F;
     padding-right: 40px ;
@@ -239,9 +223,7 @@
     display: flex;
     align-items: center;
     flex-direction: column; /* Set flex-direction to column */
-    outline: 1px solid black;
     justify-content: flex-start; /* Align to the top/left */
-    outline: 1px solid black;
     padding: 5px;
 
   }
@@ -254,9 +236,7 @@
     display: flex;
     align-items: center;
     flex-direction: column; /* Set flex-direction to column */
-    outline: 1px solid black;
     justify-content: flex-start; /* Align to the top/left */
-    outline: 1px solid black;
     padding: 5px;
     padding-left: 30px;
     color: #82808F;
@@ -267,9 +247,7 @@
     display: flex;
     align-items: center;
     flex-direction: column; /* Set flex-direction to column */
-    outline: 1px solid black;
     justify-content: flex-start; /* Align to the top/left */
-    outline: 1px solid black;
     padding: 5px;
     color: #82808F;
     padding-right: 32px ;
@@ -283,7 +261,6 @@
     align-items: center;
     justify-content: flex-start; /* Align buttons to the left */
     gap: 5px; /* Add space between buttons */
-    outline: 1px solid black; /* Add outline for debugging */
     width: 250px;
   }
   
@@ -293,6 +270,14 @@
   
   .row9 {
     grid-row: 9;
+  }
+
+  .col1-child20{
+    display: flex;
+    align-items: center; /* Center vertically */
+    padding-left: 30px;
+    font-family: 'Plus Jakarta Sans';
+
   }
   
   .row10 {
@@ -306,7 +291,7 @@
   .col1 {
     grid-column: 1;
     display: flex;
-    width: 450px;
+    width: 500px;
   }
   
   .col2 {
@@ -347,5 +332,63 @@
     margin-right: 5px;
   }
 
+ 
 
-  
+/* Style for the member dropdown */
+.memberDropdown select {
+  width: 150px; /* Adjust the width as needed */
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Style for the list dropdown */
+.col1-child15 select {
+  width: 150px; /* Adjust the width as needed */
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+
+/* Specific style for MM dropdown */
+.mm {
+  width: 60px; /* Adjust width for MM dropdown */
+}
+
+/* Specific style for DD dropdown */
+.dd {
+  width: 60px; /* Adjust width for DD dropdown */
+}
+
+/* Specific style for YYYY dropdown */
+.yyyy {
+  width: 100px; /* Adjust width for YYYY dropdown */
+}
+
+.fileInputLabel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+  height: 30px;
+  border-radius: 12px;
+  outline: 1px solid black;
+  background-color: rgba(181, 115, 237, 0.5);
+}
+
+.createTaskButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+  height: 30px;
+  border-radius: 12px;
+  outline: 1px solid black;
+  background-color: rgba(181, 115, 237, 0.5);
+  margin-top: auto; /* This will push the button to the bottom of the container */
+}
