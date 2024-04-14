@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import textData from '../Data/data.txt';
 
 //photos needed
-import image_right_side from '../../image/image_right_side_signin.png' ; 
+import image_right_side from "../Image/image_right_side_signin.png"
 
 
 function Sign_in () {
