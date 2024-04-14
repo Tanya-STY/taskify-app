@@ -1,6 +1,6 @@
 import React from "react";
 
-import image_right_side from '../../image/image_right_side_signin.png' ; 
+import image_right_side from '../Image/image_right_side_signin.png' ; 
 import './sign_up.css';
 
 import { useState } from "react";
@@ -53,9 +53,9 @@ function Sign_up() {
                     <label className="label_1">Email address</label>
                     <input className="input_1" type='email' placeholder="enter your email" value={email} onChange={handleChangeEmail}></input>
                     <label className="label_1">Password</label>
-                    <input className="input_1" type='email' placeholder="enter your password"  value={password} onChange={handleChangePassword}></input>
+                    <input className="input_1" type='password' placeholder="enter your password"  value={password} onChange={handleChangePassword}></input>
                     <label className="label_1">Retype Password</label>
-                    <input className="input_1" type='email' placeholder="retype password" value={password2} onChange={handleChangePassword2}></input>
+                    <input className="input_1" type='password' placeholder="retype password" value={password2} onChange={handleChangePassword2}></input>
                     
                     <div className="container_button_agree1">
                         <button className="button_agree" type="checkbox"></button>
