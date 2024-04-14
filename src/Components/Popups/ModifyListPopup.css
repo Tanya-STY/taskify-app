@@ -1,0 +1,36 @@
+.delete-list-button{
+    margin-top: 10px;
+    box-sizing: border-box;
+    background: rgba(85, 119, 255, 0.3);
+    border: 1px solid rgba(85, 119, 255, 0.3);
+    border-radius: 20px;
+    height: 40px;
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+
+}
+
+.modify-list-popup-content{
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1001;
+    width: 60%;
+    height: 80%;
+
+}
+
+.modify-list-popup-list-icon{
+    position: absolute;
+    top: 46%;
+    left: 25%;
+
+}
+

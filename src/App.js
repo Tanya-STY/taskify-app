@@ -15,11 +15,13 @@ import TeamViewTask from './Components/Task_forms/Team_View_Task';
 import UserCreateTask from './Components/Task_forms/User_Create_Task';
 import UserViewTask from './Components/Task_forms/User_View_Task';
 import History from "./Components/History/History.js";
+import Navbar from "./Components/Navbar/Navbar.js"
 
 
 function App() {
   return (
     <BrowserRouter>
+      <Navbar></Navbar>
       <Routes>
       <Route path="/Notification" element={<NotificationsAlerts />} />
         <Route path='/' element={<Sign_in/>} />
