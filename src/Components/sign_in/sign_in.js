@@ -2,7 +2,7 @@ import React from "react";
 import './sign_in.css';
 import { useState } from "react";
 import {useNavigate} from 'react-router-dom';
-
+import { Link } from "react-router-dom";
 //text data to verify email and password
 import textData from '../Data/data.txt';
 
@@ -62,7 +62,7 @@ function Sign_in () {
                     <label className='label_password' htmlFor="password">Password</label>
                     <input className='input_password' type='password' name='password' placeholder="enter your password" value={password} onChange={handleChangePassword}/>
                     <div className="button_container"><button className="button_signin" onClick={handleSubmit}>Sign in</button></div>
-                    <div className="bottom_text" >Don't have an account? Sign Up!</div>
+                    <div className="bottom_text" >Don't have an account? <Link to='/Sign_up'>Sign Up!</Link></div>
                 </div>
                 <div className="empty_space_holder">
 
