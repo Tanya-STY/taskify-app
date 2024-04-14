@@ -8,6 +8,7 @@ import Sign_in from './Components/sign_in/sign_in.js';
 import Chat from './Components/Chat/Chat.js';
 import Settings from './Components/Settings/Setting.js'
 import HomepageBanner from "./Components/HomepageBanner/HomepageBanner.js";
+import NotificationsAlerts from './Components/Notifications/NotificationAlerts';
 
 import TeamCreateTask from './Components/Task_forms/Team_Create_Task';
 import TeamViewTask from './Components/Task_forms/Team_View_Task';
@@ -18,6 +19,10 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="/Notification" element={<NotificationsAlerts />} />
+
+      {/* </Routes> */}
+      {/* {/* <Routes> */}
         <Route path='/' element={<Sign_in/>} />
         <Route path="/Homepage" element={<Homepage />} />
         <Route path="/Chat" element={<Chat />} />
