@@ -1,9 +1,10 @@
 .Task_forms {
     display: flex;
     justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    /* align-items: center; Center vertically */
     font-family: 'Plus Jakarta Sans';
     height: 100vh; /* Set height to viewport height */
+    margin-top: 40px;
 
   }
   
