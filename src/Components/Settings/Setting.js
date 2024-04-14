@@ -1,9 +1,13 @@
 import React from "react";
 import "./Settings.css";
 import { FaEnvelope } from "react-icons/fa";
+import HomepageBanner from "../HomepageBanner/HomepageBanner";
 
 const Settings = () => {
+
   return (
+    <div>
+        <HomepageBanner title="Settings" /> {/* Pass the title prop here */}
     <div className="settings-container">
       <div className="left-section">
         <div className="field">
@@ -31,6 +35,7 @@ const Settings = () => {
       <div className="bottom-section">
         <button className="save-button">Save</button>
       </div>
+    </div>
     </div>
   );
 };
