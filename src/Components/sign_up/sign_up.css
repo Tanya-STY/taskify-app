@@ -1,0 +1,123 @@
+.whole_page1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+.left_side_form_section1{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    flex-grow: 2;
+    height: 100vh;
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+}
+.right_side_image_section1{
+    height: 100vh;
+    display: flex;
+    flex-grow: 3;
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    border: 0; /* Reset border */
+}
+.right_side_image_section1 img{
+    width: 100%;
+}
+.title_text1{
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Playfair Display';
+    font-size: 7em;
+    font-weight: bold;
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+}
+.form_section1{
+    display: flex;
+    flex-grow:5;
+    flex-direction: column;
+    padding-left: 4em;
+    padding-right: 4em;
+}
+.lower_section1{
+    display:flex;
+    width:100%;
+    flex-grow:3;
+    flex-direction: column;
+}
+.welcome_text1{
+    display: flex;
+    align-items: flex-start;
+    font-weight: bold;
+    font-family: 'Playfair Display';
+    font-size: 4em;
+    height:8%;
+}
+.label_1{
+    display:flex;
+    align-items: flex-end;
+    font-family: 'Plus Jakarta Sans';
+    color: #C3C3C3;
+    font-size: 4em;
+    padding-left:1%;
+    height:8%;
+}
+.input_1{
+    display:flex;
+    align-items: flex-start;
+    height: 2em;
+    border-radius: 50px;
+    background-color: rgba(195, 195, 195, 0.15); 
+    font-size: 4em;
+    padding-left:2%;
+    color: #808080;
+}
+.input_1::placeholder{
+    font-family: 'Plus Jakarta Sans';
+    padding-left:1%;
+}
+.container_button_agree1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    font-family: 'Plus Jakarta Sans';
+    font-size: 3em;
+}
+.button_agree{
+    display: flex;
+    height:30px;
+    width: 30px;
+    justify-content: center;
+    align-self: center;
+    border-radius: 20%;
+}
+.container_button_submit1{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.button_submit1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    background: #B573ED80;
+    color: white;
+    font-family: 'Plus Jakarta Sans';
+    border-radius: 50px;
+    font-size: 4em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+.message_already_account1{
+    display: flex;
+    justify-content: center;
+    font-size:2em;
+}
