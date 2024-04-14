@@ -21,14 +21,28 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+      <Route path="/Notification" element={<NotificationsAlerts />} />
         <Route path='/' element={<Sign_in/>} />
+        <Route path="/Homepage" element={<Homepage />} />
+        <Route path="/Chat" element={<Chat />} />
+        <Route path="/Settings" element={<Settings />} />
+        <Route path="/HomepageBanner" element={<HomepageBanner />} />
+        <Route path="/TeamCreateTask" element={<TeamCreateTask />} />
+        <Route path="/TeamViewTask" element={<TeamViewTask />} />
+        <Route path="/UserCreateTask" element={<UserCreateTask />} />
+        <Route path="/UserViewTask" element={<UserViewTask />} />
+
+
         <Route path="Homepage" element={<Homepage />} />
-        <Route path="Sign_up" element={<Sign_up/>}/>
-        <Route path="Sign_in" element={<Sign_in/>}/>
         <Route path="Chat" element={<Chat />} />
         <Route path="Settings" element={<Settings />} />
         <Route path="HomepageBanner" element={<HomepageBanner />} />
         <Route path="/History" element={<History />} />
+
+  
+
+        <Route path="Sign_up" element={<Sign_up/>}/>
+        <Route path="Sign_in" element={<Sign_in/>}/>
       </Routes>
     </BrowserRouter>
   );
