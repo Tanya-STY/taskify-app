@@ -4,6 +4,8 @@ import Homepage from "./Components/Homepage/Homepage";
 // import History from
 import "./App.css";
 import Sign_in from './Components/sign_in/sign_in.js';
+import Chat from './Components/Chat/Chat.js';
+import Settings from './Components/Settings/Setting.js'
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Sign_in/>} />
         <Route path="Homepage" element={<Homepage />} />
+        <Route path="Chat" element={<Chat />} />
+        <Route path="Settings" element={<Settings />} />
         {/* <Route path="/history" element={<History />} /> */}
       </Routes>
     </BrowserRouter>

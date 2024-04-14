@@ -33,20 +33,6 @@
     margin-bottom: 5px;
     text-align: left;
     position: relative;
-    left: -70px;
-    /* Align the text to the left */
-}
-
-/* Adjust the position of the label for Display Name */
-.display-name-label {
-    left: -60px;
-    /* Adjust the left position as needed */
-}
-
-/* Adjust the position of the label for Email */
-.email-label {
-    left: -90px;
-    /* Adjust the left position as needed */
 }
 
 .small-input {
@@ -77,15 +63,17 @@
 
 .input-with-icon {
     position: relative;
-  }
-  
-  .input-icon {
+}
+
+.input-icon {
     position: absolute;
-    left: 10px; /* Adjust the position of the icon */
+    left: 10px;
+    /* Adjust the position of the icon */
     top: 40%;
     transform: translateY(-50%);
-    color: #ccc; /* Adjust the color of the icon */
-  }
+    color: #ccc;
+    /* Adjust the color of the icon */
+}
 
 .bottom-section {
     margin-top: auto;
@@ -111,7 +99,8 @@
         padding: 20px 10px;
     }
 
-    .left-section, .right-section {
+    .left-section,
+    .right-section {
         max-width: 100%;
         padding: 0;
         margin-bottom: 20px;
@@ -129,8 +118,10 @@
         left: auto;
     }
 
-    .display-name-label, .email-label {
-        left: -8vw; /* Adjust as needed */
+    .display-name-label,
+    .email-label {
+        left: -8vw;
+        /* Adjust as needed */
     }
 
     .save-button {
@@ -138,6 +129,7 @@
     }
 
     .email-input {
-        max-width: 90%; /* Make email input responsive */
+        max-width: 90%;
+        /* Make email input responsive */
     }
 }
