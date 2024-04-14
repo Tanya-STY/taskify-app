@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Homepage from "./Components/Homepage/Homepage";
 // import History from
+import Taskbox from "./Components/Taskbox/Taskbox";
 import "./App.css";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         {/* <Route path="/history" element={<History />} /> */}
+        <Route path="/test" element={<Taskbox />} />
       </Routes>
     </BrowserRouter>
   );

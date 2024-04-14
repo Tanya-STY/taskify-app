@@ -4,6 +4,7 @@ import homepageimg from "../Image/homepage-image.jpg";
 import bellicon from "../Image/bell-icon.png";
 import "../Image/magnify-icon.png";
 import { Link } from "react-router-dom";
+import Taskbox from "../Taskbox/Taskbox";
 
 const Homepage = () => {
   const currentDate = new Date();
@@ -32,11 +33,39 @@ const Homepage = () => {
         </Link>
       </div>
       <div className="homepage-search">
-        <input type="text" placeholder="Tasks, Tags, Title, etc." className="search-bar-homepage" />
+        <input
+          type="text"
+          placeholder="Tasks, Tags, Title, etc."
+          className="search-bar-homepage"
+        />
         <button className="new-task-button">New Task</button>
       </div>
+      <div>
+        <Taskbox title="Gym Workout" description="Working out with friends!" tag="workout" date="15 November 2024" priority="Low" />
+        <Taskbox title="Finish Studying" description="Worst day of my life:((" tag="study sesh" date="13 April 2024" priority="High" />
+        <Taskbox title="Finish Studying" description="Worst day of my life:((" tag="study sesh" date="13 April 2024" priority="High" />
+        <Taskbox title="Gym Workout" description="Working out with friends!" tag="workout" date="15 November 2024" priority="Low" />
+        <Taskbox title="Finish Studying" description="Worst day of my life:((" tag="study sesh" date="13 April 2024" priority="High" />
+        <Taskbox title="Finish Studying" description="Worst day of my life:((" tag="study sesh" date="13 April 2024" priority="High" />
+        <Taskbox title="Gym Workout" description="Working out with friends!" tag="workout" date="15 November 2024" priority="Low" />
+        <Taskbox title="Finish Studying" description="Worst day of my life:((" tag="study sesh" date="13 April 2024" priority="High" />
+        <Taskbox title="Finish Studying" description="Worst day of my life:((" tag="study sesh" date="13 April 2024" priority="High" />
+        <Taskbox title="Gym Workout" description="Working out with friends!" tag="workout" date="15 November 2024" priority="Low" />
+        <Taskbox title="Finish Studying" description="Worst day of my life:((" tag="study sesh" date="13 April 2024" priority="High" />
+        <Taskbox title="Finish Studying" description="Worst day of my life:((" tag="study sesh" date="13 April 2024" priority="High" />
+        <Taskbox title="Gym Workout" description="Working out with friends!" tag="workout" date="15 November 2024" priority="Low" />
+        <Taskbox title="Finish Studying" description="Worst day of my life:((" tag="study sesh" date="13 April 2024" priority="High" />
+        <Taskbox title="Finish Studying" description="Worst day of my life:((" tag="study sesh" date="13 April 2024" priority="High" />
+        <Taskbox title="Gym Workout" description="Working out with friends!" tag="workout" date="15 November 2024" priority="Low" />
+        <Taskbox title="Finish Studying" description="Worst day of my life:((" tag="study sesh" date="13 April 2024" priority="High" />
+        <Taskbox title="Finish Studying" description="Worst day of my life:((" tag="study sesh" date="13 April 2024" priority="High" />
+        <Taskbox title="Gym Workout" description="Working out with friends!" tag="workout" date="15 November 2024" priority="Low" />
+        <Taskbox title="Finish Studying" description="Worst day of my life:((" tag="study sesh" date="13 April 2024" priority="High" />
+        <Taskbox title="Finish Studying" description="Worst day of my life:((" tag="study sesh" date="13 April 2024" priority="High" />
+
+      </div>
       <div className="homepage-history">
-      <button className="history-button">History</button>
+        <button className="history-button">History</button>
       </div>
     </div>
   );
