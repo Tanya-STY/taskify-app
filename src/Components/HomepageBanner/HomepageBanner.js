@@ -10,7 +10,8 @@ const HomepageBanner = ({ formattedDate, title }) => {
   return (
     <div className="homepage-banner">
       <img src={homepageimg} alt="banner" className="homepage-image" />
-      <p className="list-name-homepage">{title}</p> {/* Use the title prop here */}
+      <p className="list-name-homepage">{title}</p>{" "}
+      {/* Use the title prop here */}
       <p className="homepage-date">{formattedDate}</p>
       <p className="homepage-welcome">Hello, Meredith! </p>
       <p className="homepage-welcome-message">

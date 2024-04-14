@@ -7,9 +7,20 @@ import { Link } from "react-router-dom";
 import HomepageBanner from "../HomepageBanner/HomepageBanner";
 
 const Homepage = () => {
+  const currentDate = new Date();
+  const options = {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  };
+  const formattedDate = currentDate
+    .toLocaleDateString("en-US", options)
+    .replace(/,/g, "-");
+
   return (
     <div>
-      <HomepageBanner title="My To-Do List" /> {/* Pass the title prop here */}
+      <HomepageBanner title="My To-Do List" formattedDate={formattedDate} /> {/* Pass the title prop here */}
       <div className="container-homepage">
         <div className="homepage-search">
           <input
