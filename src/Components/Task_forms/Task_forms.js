@@ -15,6 +15,10 @@ function TodoApp() {
   const [isListDropdownOpen, setIsListDropdownOpen] = useState(false);
   const [priority, setPriority] = useState('');
 
+  const [selectedDate, setSelectedDate] = useState('');
+  const [selectedYear, setSelectedYear] = useState('');
+
+
   const handleKeyDown = (event) => {
     if (event.key === 'Enter' && tag.trim() !== '') {
       setTags([tag.trim()]);
@@ -123,6 +127,17 @@ function TodoApp() {
     const file = event.target.files[0];
     setSelectedFile(file);
   };
+
+  const handleSubmit = () => {
+    // Validate if all required fields are filled
+    if (title.trim() === '' || selectedList === '' || priority === '' || selectedMembers.length === 0) {
+      alert('Please fill out all required fields: Title, Subtitle, Due Date, Tag, Assign, Group, and Priority.');
+      return;
+    }
+    // Proceed with task creation logic here
+    console.log('Task created successfully!');
+  };
+
 
   return (
     <div className='Task_forms'>
@@ -325,7 +340,7 @@ function TodoApp() {
           </div>
         </div>
 
-        <div className='col1-child19'>New Row 1</div>
+        <div className='col1-child19'></div>
         <div className='col1-child20' style={{paddingBottom:'10px', paddingTop:'20px'}}>
           <FontAwesomeIcon icon={faPen} style={{ width: '20px', height: '20px', paddingRight: '15px' }} />
           Description/Notes
@@ -374,7 +389,7 @@ function TodoApp() {
         <div className='row8 col2'></div>
         <div className='row9 col2'></div>
         <div className='row10 col2' style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-        <button className='createTaskButton'>
+        <button className='createTaskButton' onClick={handleSubmit}>
               Create Task
             </button>
         </div>
