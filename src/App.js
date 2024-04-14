@@ -19,10 +19,10 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Sign_in/>} />
-        <Route path="Homepage" element={<Homepage />} />
-        <Route path="Chat" element={<Chat />} />
-        <Route path="Settings" element={<Settings />} />
-        <Route path="HomepageBanner" element={<HomepageBanner />} />
+        <Route path="/Homepage" element={<Homepage />} />
+        <Route path="/Chat" element={<Chat />} />
+        <Route path="/Settings" element={<Settings />} />
+        <Route path="/HomepageBanner" element={<HomepageBanner />} />
         <Route path="/test" element={<Taskbox />} />
         <Route path="/TeamCreateTask" element={<TeamCreateTask />} />
         <Route path="/TeamViewTask" element={<TeamViewTask />} />

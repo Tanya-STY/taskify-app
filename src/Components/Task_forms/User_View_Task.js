@@ -247,8 +247,15 @@ function TodoApp() {
             </div>
           </div>
         </div>
+        <div className='row5 col1'>
+          <div className='col1-child10'>
+          </div>
+          <div className='col1-child11'></div>
+          <div className='col1-child12'>
           
-          
+            
+          </div>
+        </div>
         <div className='row6 col1'>
           <div className='col1-child13'>
             <FontAwesomeIcon icon={faFilter} style={{width:20, height:20}}/>
@@ -327,6 +334,7 @@ function TodoApp() {
           </div>
         </div>
 
+        <div className='col1-child19'></div>
         <div className='col1-child20' style={{paddingBottom:'10px', paddingTop:'20px'}}>
           <FontAwesomeIcon icon={faPen} style={{ width: '20px', height: '20px', paddingRight: '15px' }} />
           Description/Notes
