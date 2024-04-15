@@ -7,6 +7,9 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
+//mongodb+srv://muizmadadi:<password>@cluster0.k39ttbn.mongodb.net/
+
+
 function Sign_up() {
 
     const [name, setName] = useState('');
@@ -31,14 +34,52 @@ function Sign_up() {
     };
 
     const handleSubmit = () => {
-        if(email == 'i@hotmail.com'){
-            if (password == '123'){
-                if (password2 == '123'){
-                    navigate('/Homepage')
+        // if(email == 'i@hotmail.com'){
+        //     if (password == '123'){
+        //         if (password2 == '123'){
+
+                    const data = {
+                        name: name,
+                        email: email,
+                        password: password
+                    }
+
+                    fetch('http://127.0.0.1:5000/signup', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    })
+                    .then(response => {
+                        if(!response.ok) {
+                            alert("Not Connected to Backend")
+                        }
+                        return response.json();
+                    })
+                    
+                    .then(res_data => {
+                        console.log(res_data)
+                        if (res_data['error']){
+                            alert("Something wrong with the backend. Error: " + res_data['error'])
+                        }
+                        if(res_data['message'] == 'missing'){
+                            alert('Not yet completed, please complete before trying to log in')
+                        }
+                        if(res_data['message'] == 'ok'){
+                            navigate('/Homepage')
+                        }
+                    })
+                    .catch(error => {
+                        alert("error with backend");
+                        console.log(error);
+                    })
+
+                    //navigate('/Homepage')
                 }
-            }
-        }    
-    }
+           // }
+        //}    
+    
 
 
     return(

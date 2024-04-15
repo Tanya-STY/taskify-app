@@ -28,28 +28,74 @@ function Sign_in () {
     
     const handleSubmit = () => {
 
-        console.log('clicked button');
-        console.log('email: ' + email + ' password: ' + password);
-        console.log('fileContent: ' + fileContent);
+        const data = {
+            email: email,
+            password: password
+        };
 
-        fetch(fileContent)
-        .then(row => row.text())
-        .then(text => {
-            console.log('text inside then : ' + text);
-            console.log("text.includes(email + ' ' + password) : " + text.includes(email + ' ' + password))
-
-            if (text.includes(email + ' ' + password)) {
-            console.log('Email and password found ');
-            navigate('/Homepage');
-            
-            } else {
-            console.log('Email and/or password not found.');
-            }
-
-
-            console.log('text:', text);
-        });
+        try{
+            fetch('http://127.0.0.1:5000/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                if(!response.ok) {
+                    alert("Not Connected to Backend")
+                }
+                return response.json();
+            })
+            .then(res_data =>{
+                if (res_data['error']){
+                    alert("Something wrong with the backend. Error: " + res_data['error'])
+                }
+                else if (res_data['message'] == 'wrongPassword'){
+                    alert('Wrong password, try again')
+                }
+                else if(res_data['message'] == 'notFound'){
+                    alert('Not yet Signed Up')
+                }
+                else if (res_data['message'] == 'missing'){
+                    alert('Not yet completed, please complete before trying to log in')
+                }
+                else if(res_data['message'] == 'ok'){
+                    navigate('/Homepage')
+                }
+            })
+            .catch(error => {
+                alert("error with backend");
+                console.log(error);
+            })
+        }
+        catch(error) {
+            alert("error produced, Error: " + error)
+        }
     }
+
+    //     console.log('clicked button');
+    //     console.log('email: ' + email + ' password: ' + password);
+    //     console.log('fileContent: ' + fileContent);
+
+    //     fetch(fileContent)
+    //     .then(row => row.text())
+    //     .then(text => {
+    //         console.log('text inside then : ' + text);
+    //         console.log("text.includes(email + ' ' + password) : " + text.includes(email + ' ' + password))
+
+    //         if (text.includes(email + ' ' + password)) {
+    //         console.log('Email and password found ');
+    //         navigate('/Homepage');
+            
+    //         } else {
+    //         console.log('Email and/or password not found.');
+    //         }
+
+
+    //         console.log('text:', text);
+    //     });
+    // }
 
     return (
         <div className="full_screen">

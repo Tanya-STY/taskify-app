@@ -1,0 +1,50 @@
+1) 
+    install all the dependencies: 
+
+    go on backend folder in a terminal
+        -> open terminal in the project directory
+        -> do command ```cd backend```
+    
+    flask 
+    flask_cors
+    pymongo.mongo_client
+    from pymongo.server_api
+
+    *if any errors like "cant resolve XXX.." happends, just install that dependency using  ``` pip3 install {name-of-package}``` (or pip is not runnning on pip3)
+
+2)
+    connect to database
+    go on mongo database
+    add you ip address
+        -> look on left side bar, scroll down, click on network access, then add your ip address
+
+    connect first to the pymongo vscode extension to see if your able to
+    Connection string: mongodb+srv://muizmadadi:ARGNiSSGAKhJjnvv@cluster0.k39ttbn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+3)
+    open backend first:
+    go on backend folder in a terminal
+        -> open terminal in the project directory
+        -> do command ```cd backend```
+    run the app with  the command ```python3 app.py``` (or ```python app.py``` or ```py app.py```)
+
+4) 
+    open the frontend:
+    go on ANOTHER terminal
+    no need to do cd since we are already in the project folder
+    run command ```npm start```
+        - if npm is not recognized:
+            -> you dont have node.js on your computer, go download it from the internet
+        - after downloading it npm is still not recognized:
+            -> you have it, the path is just not set correctly, search " how to set path environment of npm in my $computer computer " (replace $computer for the machine you are using (MacOs, windows, linux, etc))
+    if react-scripts is not found or not recognized:
+        - run command ```npm install react-scripts```
+        - if the command fails:
+            -> run the command again but with --force or --legacy-peer-deps at the end
+
+
+NOTES: 
+    - if you have CORS issue (403), it might be because of 127.0.0.1 in signup or signin.
+    - solution: change it to localhost and check again later, the issue takes time to resolve idk why
+
+
