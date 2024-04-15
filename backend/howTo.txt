@@ -14,11 +14,15 @@
 
 2)
     connect to database
-    go on mongo database
+    go on mongodb website
+    log in with these credentials to access the already made account
+        email: soen357taskify@gmail.com
+        password: sch00l!1234
     add you ip address
         -> look on left side bar, scroll down, click on network access, then add your ip address
 
     connect first to the pymongo vscode extension to see if your able to
+        -> if you do not have it, add it on vscode extensions, click on connect and paste the string below in the input space
     Connection string: mongodb+srv://muizmadadi:ARGNiSSGAKhJjnvv@cluster0.k39ttbn.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 
 3)
@@ -46,5 +50,4 @@
 NOTES: 
     - if you have CORS issue (403), it might be because of 127.0.0.1 in signup or signin.
     - solution: change it to localhost and check again later, the issue takes time to resolve idk why
-
 
