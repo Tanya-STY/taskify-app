@@ -29,7 +29,7 @@ const HomepageBanner = ({ title }) => {
       <p className="homepage-welcome-message">
         Welcome back! Each day I will accomplish one thing on my list.
       </p>
-      <Link to={"/"}>
+      <Link to={"/Notification"}>
         <img src={bellicon} alt="bell icon" className="bell-icon-homepage" />
       </Link>
     </div>

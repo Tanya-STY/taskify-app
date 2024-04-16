@@ -16,7 +16,6 @@ const History = () => {
           placeholder="Tasks, Tags, Title, etc."
           className="search-bar-homepage"
         />
-        <button className="new-task-button">New Task</button>
       </div>
       <div className="tasks-homepage">
         <Taskbox

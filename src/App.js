@@ -35,10 +35,10 @@ function App() {
         <Route path="/UserViewTask" element={<UserViewTask />} />
 
 
-        <Route path="Homepage" element={<Homepage />} />
-        <Route path="Chat" element={<Chat />} />
-        <Route path="Settings" element={<Settings />} />
-        <Route path="HomepageBanner" element={<HomepageBanner />} />
+        {/* <Route path="Homepage" element={<Homepage />} /> */}
+        {/* <Route path="Chat" element={<Chat />} /> */}
+        {/* <Route path="Settings" element={<Settings />} /> */}
+        {/* <Route path="HomepageBanner" element={<HomepageBanner />} /> */}
         <Route path="/History" element={<History />} />
 
   
