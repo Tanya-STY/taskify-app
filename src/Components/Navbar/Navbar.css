@@ -274,3 +274,21 @@
 
 }
 
+.bottom-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; /* Adjust the margin as needed */
+}
+
+.username {
+    margin-right: 10px; /* Adjust the margin between the username and icons */
+}
+
+.icon-container {
+    display: flex;
+}
+
+.icon {
+    margin-left: 10px; /* Adjust the margin between the icons */
+}
