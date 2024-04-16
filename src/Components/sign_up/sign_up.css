@@ -1,3 +1,6 @@
+:root{
+    font-size: 15px;
+}
 .whole_page1{
     width: 100%;
     height: auto;
@@ -32,7 +35,7 @@
     justify-content: center;
     align-items: center;
     font-family: 'Playfair Display';
-    font-size: 7em;
+    font-size: 7rem;
     font-weight: bold;
     margin: 0; 
     padding: 0; 
@@ -42,8 +45,8 @@
     display: flex;
     flex-grow:5;
     flex-direction: column;
-    padding-left: 4em;
-    padding-right: 4em;
+    padding-left: 4rem;
+    padding-right: 4rem;
 }
 .lower_section1{
     display:flex;
@@ -56,7 +59,7 @@
     align-items: flex-start;
     font-weight: bold;
     font-family: 'Playfair Display';
-    font-size: 4em;
+    font-size: 4rem;
     height:8%;
 }
 .label_1{
@@ -64,17 +67,17 @@
     align-items: flex-end;
     font-family: 'Plus Jakarta Sans';
     color: #C3C3C3;
-    font-size: 4em;
+    font-size: 4rem;
     padding-left:1%;
     height:8%;
 }
 .input_1{
     display:flex;
     align-items: flex-start;
-    height: 2em;
+    height: 6rem;
     border-radius: 50px;
     background-color: rgba(195, 195, 195, 0.15); 
-    font-size: 4em;
+    font-size: 4rem;
     padding-left:2%;
     color: #808080;
 }
@@ -88,7 +91,7 @@
     align-items: center;
     height: 15%;
     font-family: 'Plus Jakarta Sans';
-    font-size: 3em;
+    font-size: 3rem;
 }
 .button_agree{
     display: flex;
@@ -112,12 +115,12 @@
     color: white;
     font-family: 'Plus Jakarta Sans';
     border-radius: 50px;
-    font-size: 4em;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
+    font-size: 6rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
 }
 .message_already_account1{
     display: flex;
     justify-content: center;
-    font-size:2em;
+    font-size:2rem;
 }
