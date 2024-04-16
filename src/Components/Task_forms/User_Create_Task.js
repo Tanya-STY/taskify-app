@@ -142,7 +142,7 @@ function TodoApp() {
 
   return (
     <div>
-      <HomepageBanner/>
+          <HomepageBanner title="Create Task" /> {/* Pass the title prop here */}
     <div className='Task_forms'>
     <div className='taskContainer'>
       <div className='row1 col1'>

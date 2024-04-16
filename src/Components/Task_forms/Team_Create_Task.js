@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../Task_forms/Task_forms.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen, faClock, faTag, faUser, faFilter, faStarHalfStroke } from '@fortawesome/free-solid-svg-icons';
+import HomepageBanner from "../HomepageBanner/HomepageBanner";
 
 
 
@@ -140,7 +141,13 @@ function TodoApp() {
 
 
   return (
-    <div className='Task_forms'>
+    <div>
+          <HomepageBanner title="Create Task" /> {/* Pass the title prop here */}
+
+    <div className='Task_forms'>      
+    
+
+
     <div className='taskContainer'>
       <div className='row1 col1'>
         <div className="col1-child1">
@@ -397,6 +404,8 @@ function TodoApp() {
           </div>
       </div>
     </div>
+    </div>
+
   );
 }
 
