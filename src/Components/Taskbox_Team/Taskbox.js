@@ -47,7 +47,7 @@ const Taskbox = ({ title, description, tag, date, priority }) => {
         <p className="description-taskbox">{truncatedesc}</p>
         <p className="date-taskbox">{date}</p>
         <p className={`priority-taskbox ${priorityClass}`}>{priority}</p>
-        <Link to='/UserViewTask'><button className="button-taskbox">
+        <Link to='/TeamViewTask'><button className="button-taskbox">
           <img src={editicon} alt="edit" className="editicon-taskbox" />
         </button></Link>
       </div>

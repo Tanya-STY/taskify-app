@@ -10,6 +10,8 @@ import AddTeamsPopup from "../Popups/AddTeamPopup.js";
 import { IoIosMore } from "react-icons/io";
 import ModifyTeamListPopup from "../Popups/ModifyTeamListPopup.js";
 import { FaCog, FaSignOutAlt } from "react-icons/fa"; // Import icons for settings and logout
+import { Link } from 'react-router-dom';
+
 
 const Navbar = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -70,16 +72,32 @@ const Navbar = () => {
                     <p className="my-list">MY LISTS</p>
                     <p className="add-icon" onClick={toggleAddPopup}>+</p>
                 </div>
-                <div className="list-item">
+
+                {/* <div className="list-item">
                     <p className="list-item-paragraph">
                         <VscListFlat className="list-icon" />
                         MY TO-DO LIST</p>
                     <p className="add-icon-list" onClick={toggleAddPopup}>+</p>
+                </div> */}
+
+                <div className="list-item">
+                    <p className="list-item-paragraph">
+                    <VscListFlat className="list-icon" />
+                    <Link to="/Homepage"><p className="list-item-paragraph">
+                    MY TO-DO LIST </p></Link>
+
+                    </p>
+                    <p className="add-icon-list" onClick={toggleAddPopup}>+</p>
                 </div>
+
+
                 <div className="last-list-item">
                     <p className="list-item-paragraph">
                         <VscListFlat className="list-icon" />
-                        GROCERY LIST</p>
+                        <Link to="/Homepage"><p className="list-item-paragraph">
+                    GROCERY LIST </p></Link>
+
+                        </p>
                     <IoIosMore className="more-icon" onClick={toggleModifyListPopup}/>
 
                     <p className="add-icon-list" onClick={toggleAddPopup} >+</p>
@@ -90,12 +108,13 @@ const Navbar = () => {
                 </div>
                 <div className="team-list">
                     <h1 className="team-icon">M</h1>
-                    <p className="minicapstone">MINI-CAPSTONE</p>
+
+                    <Link to="/Homepage_Team"><p className="minicapstone">MINI-CAPSTONE</p></Link>
                     <IoIosMore className="more-icon" onClick={toggleModifyTeamListPopup}/>
                     <p className="add-icon-list-minicapstone" onClick={toggleAddPopup} >+</p>
                 </div>
                 <div className="chat">
-                    <p>CHAT</p>
+                    <Link to='/Chat' style={{fontSize:'16px', color:'#33539E'}}><p>CHAT</p></Link>
                 </div>
                 <div className="sprints">
                     <p>SPRINT 1</p>
@@ -113,8 +132,8 @@ const Navbar = () => {
                 <div className="bottom-div">
                     <p className="username" style={{fontSize:'20px'}}>Meredith Grey</p>
                     <div className="icon-container">
-                        <FaCog className="icon" onClick={handleSettingsClick} style={{height:'20px', width:'20px'}}/>
-                        <FaSignOutAlt className="icon" onClick={handleLogoutClick} style={{height:'20px', width:'20px'}}/>
+                        <Link to='/Settings'><FaCog className="icon" onClick={handleSettingsClick} style={{height:'20px', width:'20px', color: "black"}} /> </Link>
+                        <Link to='/'><FaSignOutAlt className="icon" onClick={handleLogoutClick} style={{height:'20px', width:'20px', color: "black"}}/></Link>
                     </div>
                 </div>
             </div>

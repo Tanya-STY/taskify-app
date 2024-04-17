@@ -1,8 +1,8 @@
 import React from "react";
-import "./Homepage.css";
+import "./Homepage_Team.css";
 import "../Image/magnify-icon.png";
 import HomepageBanner from "../HomepageBanner/HomepageBanner";
-import Taskbox from "../Taskbox/Taskbox";
+import Taskbox from "../Taskbox_Team/Taskbox";
 import { Link } from "react-router-dom";
 
 const Homepage = () => {
@@ -15,7 +15,7 @@ const Homepage = () => {
           placeholder="Tasks, Tags, Title, etc."
           className="search-bar-homepage"
         />
-        <button className="new-task-button"><Link to="/UserCreateTask" className="new-task-button">New Task</Link></button>
+        <button className="new-task-button"><Link to="/TeamCreateTask" className="new-task-button">New Task</Link></button>
         <Link to="/History" className="history-button">
           History
         </Link>

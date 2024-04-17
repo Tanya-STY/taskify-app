@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../Task_forms/Task_forms.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen, faClock, faTag, faUser, faFilter, faStarHalfStroke } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 import HomepageBanner from '../HomepageBanner/HomepageBanner';
 
@@ -63,50 +64,8 @@ function TodoApp() {
     return <option key={year} value={year}>{year}</option>;
   });
 
-  const [teamMembers, setTeamMembers] = useState([
-    'Tanya', 'Shamma', 'Fadoua', 'Asmae', 'Ihana', 'Muiz', 'John', 'Alice', 'Bob', 'Emily', 'Michael', 'Sarah', 'David', 'Emma', 'James', 'Olivia',
-    'Daniel', 'Sophia', 'Matthew', 'Isabella', 'Christopher', 'Mia', 'Andrew', 'Charlotte', 'Joseph', 'Amelia'
-  ]);
 
-  const [selectedMembers, setSelectedMembers] = useState([]);
-  const [selectedMember, setSelectedMember] = useState('');
 
-  const handleMemberSelect = (member) => {
-    if (member.trim() !== '') {
-      setSelectedMembers([...selectedMembers, member.trim()]);
-      setSelectedMember('');
-      setTeamMembers(teamMembers.filter((m) => m !== member)); // Remove the selected member from the dropdown menu
-    }
-  };
-  
-
-  const handleMemberKeyDown = (event) => {
-    if (event.key === 'Enter' && selectedMember.trim() !== '') {
-      handleMemberSelect(selectedMember);
-    }
-  };
-
-  const removeMember = (member) => {
-    setSelectedMembers(selectedMembers.filter((m) => m !== member));
-  };
-
-  const renderMemberTags = () => {
-    return selectedMembers.map((member, index) => (
-      <div
-        key={index}
-        className="selectedMember"
-        onClick={() => removeMember(member)}
-      >
-        @{member}
-      </div>
-    ));
-  };
-
-  const addMember = () => {
-    if (selectedMember.trim() !== '') {
-      handleMemberSelect(selectedMember);
-    }
-  };
 
   const handleListSelect = (list) => {
     setSelectedList(list);
@@ -131,8 +90,8 @@ function TodoApp() {
 
   const handleSubmit = () => {
     // Validate if all required fields are filled
-    if (title.trim() === '' || selectedList === '' || priority === '' || selectedMembers.length === 0) {
-      alert('Please fill out all required fields: Title, Subtitle, Due Date, Tag, Assign, Group, and Priority.');
+    if (title.trim() === '' || selectedList === '' || priority === '') {
+      alert('Please fill out all required fields: Title, Subtitle, Due Date, Tag, Group, and Priority.');
       return;
     }
     // Proceed with task creation logic here
@@ -361,8 +320,8 @@ function TodoApp() {
         <div className='row8 col2'></div>
         <div className='row9 col2'></div>
         <div className='row10 col2' style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-        <button className='createTaskButton' onClick={handleSubmit}>
-              Create Task
+        <button className='createTaskButton' onClick={handleSubmit} style={{}}>
+              <Link to='/Homepage' >Create Task</Link>
             </button>
         </div>
         <div >
