@@ -91,7 +91,7 @@ Now that you have installed the dependencies and connected to the database, foll
 ![PopUp Edit User List](https://github.com/Tanya-STY/taskify-app/assets/95064474/f1adf3b6-edac-4f80-a32d-c017ff970d2f)
 
 ### Pop-Up Page to Create a Team List
-#![PopUp Create New Team List](https://github.com/Tanya-STY/taskify-app/assets/95064474/91656f51-60d5-460f-a828-1ed25b2c8849)
+![PopUp Create New Team List](https://github.com/Tanya-STY/taskify-app/assets/95064474/91656f51-60d5-460f-a828-1ed25b2c8849)
 
 #### Pop-Up Page to Edit a Team List
 ![PopUp Edit Team List](https://github.com/Tanya-STY/taskify-app/assets/95064474/a0bf011f-44b9-4c21-94ff-007cfd1af5ef)
