@@ -1,3 +1,13 @@
+## Taskify App
+
+Taskify is a user-friendly task management application designed to help individuals and teams organize their tasks efficiently. With intuitive features and seamless collaboration capabilities, Taskify streamlines task management, boosting productivity and ensuring nothing falls through the cracks. Please see the following Figma prototype for a visual representation of the application's design and functionality.
+
+
+https://github.com/Tanya-STY/taskify-app/assets/95064474/0a48b811-41b2-4bfb-b561-1d1b4c7390b1
+
+
+---
+
 ### User Manual: How to Run Taskify Application
 
 Thank you for choosing Taskify! Below are the steps to successfully run the application on your local machine.
@@ -62,7 +72,27 @@ Now that you have installed the dependencies and connected to the database, foll
    - If the installation fails, try running the command again with the --force or --legacy-peer-deps flag.
 
 ---
+#### That's it! You have successfully set up and run the Taskify application on your local machine. Enjoy managing your tasks efficiently with Taskify! If you encounter any issues, refer to the troubleshooting section in the README.md file or reach out to our support team for assistance.
+---
+## A few snapshots of the App
+#### Sign Up Page
+![SignUp](https://github.com/Tanya-STY/taskify-app/assets/95064474/e08f6d25-4cd0-4665-9e64-839589ee31b4)
 
-That's it! You have successfully set up and run the Taskify application on your local machine. Enjoy managing your tasks efficiently with Taskify! If you encounter any issues, refer to the troubleshooting section in the README.md file or reach out to our support team for assistance.
+#### Sign In Page
+![SignIn](https://github.com/Tanya-STY/taskify-app/assets/95064474/b0e559e1-2bd4-4562-8093-f23c095bd611)
 
+#### NavBar
+![NavBar](https://github.com/Tanya-STY/taskify-app/assets/95064474/6b7f5f03-d734-4725-967c-3559350a01b0)
+
+#### Pop-Up Page to Create a User List
+![PopUp Create User List](https://github.com/Tanya-STY/taskify-app/assets/95064474/69c8526a-69bc-41e6-99c6-2ee0639fd5ee)
+
+#### Pop-Up Page to Edit a User List
+![PopUp Edit User List](https://github.com/Tanya-STY/taskify-app/assets/95064474/f1adf3b6-edac-4f80-a32d-c017ff970d2f)
+
+### Pop-Up Page to Create a Team List
+#![PopUp Create New Team List](https://github.com/Tanya-STY/taskify-app/assets/95064474/91656f51-60d5-460f-a828-1ed25b2c8849)
+
+#### Pop-Up Page to Edit a Team List
+![PopUp Edit Team List](https://github.com/Tanya-STY/taskify-app/assets/95064474/a0bf011f-44b9-4c21-94ff-007cfd1af5ef)
 
