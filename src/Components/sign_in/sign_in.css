@@ -22,7 +22,7 @@
 .right_side_image_section{
     height: 100vh;
     display: flex;
-    flex-grow: 7;
+    flex-grow: 10;
     margin: 0; /* Reset margin */
     padding: 0; /* Reset padding */
     border: 0; /* Reset border */
@@ -33,7 +33,7 @@
 .title_text{
     display: flex;
     width: 100%;
-    flex-grow: 1;
+    height:30rem;
     justify-content: center;
     align-items: center;
     font-family: 'Playfair Display';
@@ -131,5 +131,5 @@
 }
 .empty_space_holder{
     display: flex;
-    flex-grow:1;
+    flex-grow:3;
 }
